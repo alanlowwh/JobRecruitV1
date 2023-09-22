@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/listJobFragment">
+
+    <fragment
+        android:id="@+id/listJobFragment"
+        android:name="com.example.jobrecruitv1.fragments.list.ListJobFragment"
+        android:label="List Job"
+        tools:layout="@layout/fragment_list_job" >
+        <action
+            android:id="@+id/action_listJobFragment_to_addJobFragment"
+            app:destination="@id/addJobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addJobFragment"
+        android:name="com.example.jobrecruitv1.fragments.add.AddJobFragment"
+        android:label="Add Job"
+        tools:layout="@layout/fragment_add_job" >
+        <action
+            android:id="@+id/action_addJobFragment_to_listJobFragment"
+            app:destination="@id/listJobFragment" />
+    </fragment>
+</navigation>
