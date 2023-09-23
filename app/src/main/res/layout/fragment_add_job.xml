@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/jobDescription_editText" />
 
     <Button
-        android:id="@+id/add_job_btn"
+        android:id="@+id/post_job_btn"
         android:layout_width="275dp"
         android:layout_height="58dp"
         android:layout_marginTop="24dp"

@@ -1,20 +1,28 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs")
+
+
 }
 
 android {
     namespace = "com.example.jobrecruitv1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.jobrecruitv1"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 
     buildTypes {
@@ -48,11 +56,21 @@ dependencies {
 //    kapt("androidx.room:room-compiler:$room_version")
 
     // Java language implementation
-    val nav_version = "2.6.0"
+    val nav_version = "2.7.3"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
 
+
+// Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
 
     implementation("androidx.core:core-ktx:1.9.0")

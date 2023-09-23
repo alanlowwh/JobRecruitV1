@@ -12,7 +12,7 @@ import androidx.room.Update
 interface JobListingDAO {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertJobListing(jobListing: JobListing)
+     fun insertJobListing(jobListing: JobListing)
 
     @Update
     suspend fun updateJobListing(jobListing: JobListing)
